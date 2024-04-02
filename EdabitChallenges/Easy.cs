@@ -23,4 +23,13 @@ public static class Easy
 
         return date.ToString("MMMM");
     }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/kMWmiNJM4szSv7dLd">Link to challenge</see>
+    /// </summary>
+    /// <param name="nums"></param>
+    public static int[] FindMinMax(int[] nums)
+    {
+        return [nums.Min(), nums.Max()];
+    }
 }

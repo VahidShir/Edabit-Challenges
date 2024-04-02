@@ -1,13 +1,16 @@
-﻿namespace EdabitChallenges;
+﻿using System.Linq;
+
+namespace EdabitChallenges;
 
 internal class Program
 {
     static void Main(string[] args)
     {
 
-        Console.WriteLine(Easy.MonthNameV1(1));
-        Console.WriteLine(Easy.MonthNameV1(2));
-        Console.WriteLine(Easy.MonthNameV1(12));
+        Console.WriteLine(string.Join(',',Easy.FindMinMax([1])));
+        Console.WriteLine(string.Join(',',Easy.FindMinMax([1, 2, 3, 4, -55])));
+        Console.WriteLine(string.Join(',',Easy.FindMinMax([-10, 0, 0, 2])));
+
         Console.ReadLine();
     }
 }
