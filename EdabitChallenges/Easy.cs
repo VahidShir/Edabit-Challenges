@@ -32,4 +32,13 @@ public static class Easy
     {
         return [nums.Min(), nums.Max()];
     }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/K49LXsoMmS6tXxP7R">Link to challenge</see>
+    /// </summary>
+    /// <param name="nums"></param>
+    public static int HammingDistance(string a, string b)
+    {
+        return a.Zip(b, (first, second) => first == second).Count(x => x == false);
+    }
 }
