@@ -99,4 +99,47 @@ public static class Easy
     {
         return input.All(c => c == input[0]);
     }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/7nzfry4P3WrrL7t38">Link to challenge</see>
+    /// </summary>
+    public static string HackerSpeak(string input)
+    {
+        string result = "";
+        foreach (char c in input)
+        {
+            if (c == 'a')
+                result += '4';
+            else if (c == 'e')
+                result += '3';
+            else if (c == 'i')
+                result += '1';
+            else if (c == 'o')
+                result += '0';
+            else if (c == 's')
+                result += '5';
+            else
+                result += c;
+        }
+
+        return result;
+    }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/7nzfry4P3WrrL7t38">Link to challenge</see>
+    /// </summary>
+    public static string HackerSpeakV2(string input)
+    {
+        //var codes = [new KeyValuePair()];
+        var codes = new Dictionary<char, char>
+        {
+            {'a', '4' }, 
+            {'e', '3' }, 
+            {'i', '1' }, 
+            {'o', '0' }, 
+            {'s', '5' }, 
+        };
+
+        return string.Concat( input.Select(x => codes.ContainsKey(x)? codes[x] : x));
+    }
 }
