@@ -6,8 +6,9 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine(Easy.HackerSpeak("javascript is cool"));
-        Console.WriteLine(Easy.HackerSpeak("become a coder"));
+        Console.WriteLine(Easy.SameCase("hello"));
+        Console.WriteLine(Easy.SameCase("HELLO"));
+        Console.WriteLine(Easy.SameCase("Hello"));
 
         Console.ReadLine();
     }

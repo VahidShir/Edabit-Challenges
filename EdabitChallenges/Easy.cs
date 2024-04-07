@@ -133,13 +133,19 @@ public static class Easy
         //var codes = [new KeyValuePair()];
         var codes = new Dictionary<char, char>
         {
-            {'a', '4' }, 
-            {'e', '3' }, 
-            {'i', '1' }, 
-            {'o', '0' }, 
-            {'s', '5' }, 
+            {'a', '4' },
+            {'e', '3' },
+            {'i', '1' },
+            {'o', '0' },
+            {'s', '5' },
         };
 
-        return string.Concat( input.Select(x => codes.ContainsKey(x)? codes[x] : x));
+        return string.Concat(input.Select(x => codes.ContainsKey(x) ? codes[x] : x));
     }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/ivaEWKZbFMcR8emJ8">Link to challenge</see>
+    /// </summary>
+    public static bool SameCase(string input) =>
+        input.All(c => char.IsLower(c)) || input.All(c => char.IsUpper(c));
 }
