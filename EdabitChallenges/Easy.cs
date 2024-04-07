@@ -49,4 +49,28 @@ public static class Easy
 
         return string.Join(" ", splitted.Reverse());
     }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/PmhP5mXMRrBoH3WoB">Link to challenge</see>
+    /// </summary>
+    public static int Factorial(int n)
+    {
+        if (n == 1)
+            return 1;
+        else
+            return Factorial(n - 1) * n;
+    }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/PmhP5mXMRrBoH3WoB">Link to challenge</see>
+    /// </summary>
+    public static int FactorialV2(int n)
+    {
+        int result = 1;
+        for (int i = n; i > 0; i--)
+        {
+            result *= i;
+        }
+        return result;
+    }
 }
