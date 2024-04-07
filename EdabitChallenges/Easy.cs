@@ -91,4 +91,12 @@ public static class Easy
 
         return n.Order().ToArray();
     }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/zhbYFanESDL3RfSyt">Link to challenge</see>
+    /// </summary>
+    public static bool IsIdentical(string input)
+    {
+        return input.All(c => c == input[0]);
+    }
 }

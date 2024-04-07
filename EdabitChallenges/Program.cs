@@ -6,7 +6,7 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine(string.Join(',', Easy.SortNumsAscending([12, 5, 50])));
+        Console.WriteLine(Easy.IsIdentical("aaaaaa"));
 
         Console.ReadLine();
     }
