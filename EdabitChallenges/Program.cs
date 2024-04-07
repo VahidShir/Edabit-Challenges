@@ -6,7 +6,7 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine(Easy.HammingDistance("strong", "strung"));
+        Console.WriteLine(Easy.NameShuffle("Donald Trump"));
 
         Console.ReadLine();
     }

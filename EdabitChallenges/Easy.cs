@@ -27,7 +27,6 @@ public static class Easy
     /// <summary>
     /// <see href="https://edabit.com/challenge/kMWmiNJM4szSv7dLd">Link to challenge</see>
     /// </summary>
-    /// <param name="nums"></param>
     public static int[] FindMinMax(int[] nums)
     {
         return [nums.Min(), nums.Max()];
@@ -36,9 +35,18 @@ public static class Easy
     /// <summary>
     /// <see href="https://edabit.com/challenge/K49LXsoMmS6tXxP7R">Link to challenge</see>
     /// </summary>
-    /// <param name="nums"></param>
     public static int HammingDistance(string a, string b)
     {
         return a.Zip(b, (first, second) => first == second).Count(x => x == false);
+    }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/c4W4BNymgCC5WkfHp">Link to challenge</see>
+    /// </summary>
+    public static string NameShuffle(string name)
+    {
+        var splitted = name.Split(" ");
+
+        return string.Join(" ", splitted.Reverse());
     }
 }
