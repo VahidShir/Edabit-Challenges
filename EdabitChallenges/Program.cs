@@ -6,7 +6,7 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine(Easy.CountVowels("Celebration"));
+        Console.WriteLine(string.Join(',', Easy.SortNumsAscending([12, 5, 50])));
 
         Console.ReadLine();
     }

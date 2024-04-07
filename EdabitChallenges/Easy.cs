@@ -80,4 +80,15 @@ public static class Easy
     /// <see href="https://edabit.com/challenge/5ytLyHsZHfyDhBgXr">Link to challenge</see>
     /// </summary>
     public static int CountVowels(string text) => text.Count(c => new char[] { 'a', 'e', 'i', 'o', 'u' }.Any(vowel => vowel == char.ToLower(c)));
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/RocWAnyqu5J4fiZxS">Link to challenge</see>
+    /// </summary>
+    public static int[] SortNumsAscending(int[] n)
+    {
+        if (n?.Length == 0)
+            return [];
+
+        return n.Order().ToArray();
+    }
 }
