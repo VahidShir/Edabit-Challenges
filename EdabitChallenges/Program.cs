@@ -6,8 +6,7 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine(Easy.FactorialV2(3));
-        Console.WriteLine(Easy.FactorialV2(5));
+        Console.WriteLine(Easy.CountVowels("Celebration"));
 
         Console.ReadLine();
     }

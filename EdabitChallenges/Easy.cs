@@ -1,4 +1,6 @@
-﻿namespace EdabitChallenges;
+﻿using System.Reflection.Metadata.Ecma335;
+
+namespace EdabitChallenges;
 
 public static class Easy
 {
@@ -73,4 +75,9 @@ public static class Easy
         }
         return result;
     }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/5ytLyHsZHfyDhBgXr">Link to challenge</see>
+    /// </summary>
+    public static int CountVowels(string text) => text.Count(c => new char[] { 'a', 'e', 'i', 'o', 'u' }.Any(vowel => vowel == char.ToLower(c)));
 }
