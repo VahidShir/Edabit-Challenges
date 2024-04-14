@@ -6,7 +6,7 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine(Easy.NSidedShape(3));
+        Console.WriteLine(string.Join(",", Medium.ArrayOfMultiples(7, 5)));
 
         Console.ReadLine();
     }
