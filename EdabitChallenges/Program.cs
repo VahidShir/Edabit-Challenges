@@ -6,8 +6,7 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine(Easy.CountClaps("ClaClaClaClap!"));
-        Console.WriteLine(Easy.CountClaps("CCClaClClap!Clap!ClClClap!") );
+        Console.WriteLine(Easy.NSidedShape(3));
 
         Console.ReadLine();
     }

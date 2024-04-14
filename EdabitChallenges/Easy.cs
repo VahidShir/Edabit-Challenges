@@ -156,4 +156,26 @@ public static class Easy
     {
         return input.Count(x => x == 'C');
     }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/YciBg83ihMfGGsA7F">Link to challenge</see>
+    /// </summary>
+    public static string NSidedShape(int n)
+    {
+        var shapes = new Dictionary<int, string>()
+        {
+            { 1, "circle"},
+            { 2, "semi-circle"},
+            { 3, "triangle"},
+            { 4, "square"},
+            { 5, "pentagon"},
+            { 6, "hexagon"},
+            { 7, "heptagon"},
+            { 8, "octagon"},
+            { 9, "nonagon"},
+            { 10, "decagon"},
+        };
+
+        return shapes[n];
+    }
 }
