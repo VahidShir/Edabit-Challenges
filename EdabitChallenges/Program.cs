@@ -6,7 +6,7 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine(string.Join(",", Medium.ArrayOfMultiples(7, 5)));
+        Console.WriteLine(Medium.ReverseCase("sPoNtAnEoUs"));
 
         Console.ReadLine();
     }
