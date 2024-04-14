@@ -148,4 +148,12 @@ public static class Easy
     /// </summary>
     public static bool SameCase(string input) =>
         input.All(c => char.IsLower(c)) || input.All(c => char.IsUpper(c));
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/rsW2hHobz6WG4cqbB">Link to challenge</see>
+    /// </summary>
+    public static int CountClaps(string input)
+    {
+        return input.Count(x => x == 'C');
+    }
 }

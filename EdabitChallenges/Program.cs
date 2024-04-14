@@ -6,9 +6,8 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine(Easy.SameCase("hello"));
-        Console.WriteLine(Easy.SameCase("HELLO"));
-        Console.WriteLine(Easy.SameCase("Hello"));
+        Console.WriteLine(Easy.CountClaps("ClaClaClaClap!"));
+        Console.WriteLine(Easy.CountClaps("CCClaClClap!Clap!ClClClap!") );
 
         Console.ReadLine();
     }
