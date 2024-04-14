@@ -6,7 +6,7 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine(Medium.ReverseCase("sPoNtAnEoUs"));
+        Console.WriteLine(Hard.ReverseAndNot(123));
 
         Console.ReadLine();
     }
