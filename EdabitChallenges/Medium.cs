@@ -30,4 +30,12 @@ public static class Medium
     {
         return string.Concat(input.Select(c => char.IsLower(c) ? char.ToUpper(c) : char.ToLower(c)));
     }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/Q7g8sfg7DJq6CyMMu">Link to challenge</see>
+    /// </summary>
+    public static bool CheckEquality(object a, object b)
+    {     
+        return Object.Equals(a, b);
+    }
 }

@@ -6,7 +6,7 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine(Easy.LongBurp(3));
+        Console.WriteLine(Medium.CheckEquality(new {Name="n"}, new {Name="n"}));
 
         Console.ReadLine();
     }
