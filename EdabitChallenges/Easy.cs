@@ -178,4 +178,18 @@ public static class Easy
 
         return shapes[n];
     }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/xFaPak5hmiR3vpH6M">Link to challenge</see>
+    /// </summary>
+    public static string LongBurp(int n)
+    {
+        var test = new string('r', 3);
+        return $"Bu{Enumerable.Repeat('r', n).ConcatString()}p";
+    }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/xFaPak5hmiR3vpH6M">Link to challenge</see>
+    /// </summary>
+    public static string LongBurpV2(int n) => "Bu" + new string('r', n) + "p";
 }

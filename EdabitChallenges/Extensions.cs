@@ -6,4 +6,6 @@ public static class Extensions
     {
         return string.Concat(input);
     }
+
+  
 }
