@@ -6,7 +6,7 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine(Hard.Interview(new int [] { 5, 5, 10, 10, 15, 15, 20 }, 120));
+        Console.WriteLine(Medium.IndexOfCapitals("STRIKE").ConcatString());
 
         Console.ReadLine();
     }

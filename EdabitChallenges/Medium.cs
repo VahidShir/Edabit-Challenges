@@ -35,7 +35,23 @@ public static class Medium
     /// <see href="https://edabit.com/challenge/Q7g8sfg7DJq6CyMMu">Link to challenge</see>
     /// </summary>
     public static bool CheckEquality(object a, object b)
-    {     
+    {
         return Object.Equals(a, b);
+    }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/6qFnpAhd3kdmYcNG2">Link to challenge</see>
+    /// </summary>
+    public static int[] IndexOfCapitals(string text)
+    {
+        var temp = text.Select((v, index) =>
+        {
+            if (char.IsUpper(v))
+                return index;
+            else
+            return -1;
+        });
+
+        return temp.Where(x => x != -1).ToArray();
     }
 }

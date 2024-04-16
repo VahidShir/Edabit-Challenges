@@ -7,5 +7,8 @@ public static class Extensions
         return string.Concat(input);
     }
 
-  
+    public static string ConcatString(this IEnumerable<int> input)
+    {
+        return string.Concat(input);
+    }
 }
