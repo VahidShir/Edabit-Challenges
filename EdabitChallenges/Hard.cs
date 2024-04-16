@@ -57,4 +57,27 @@ public static class Hard
 
         return censoredText.Select(c => c == '*' ? vowelsQueue.Dequeue() : c).ConcatString();
     }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/dZeNE4BJhyNgA99Fq">Link to challenge</see>
+    /// </summary>
+    public static string Interview(int[] times, int total)
+    {
+        string disqualified = "disqualified";
+
+        //Interview(new int [] { 5, 5, 10, 10, 15, 15, 20, 20 }, 120) ➞ "qualified"
+        if (total > 120)
+            return disqualified;
+
+        var timeLimit = new[] { 5, 5, 10, 10, 15, 15, 20, 20 };
+        if (times.Length < timeLimit.Length)
+            return disqualified;
+
+        var passedTimes = timeLimit.Select((v, index) => times[index] <= v);
+        //var exceededLimits = times.Zip(timeLimit, (a, b) => a > b);// it is another method
+        if (passedTimes.Any(x => x == false))
+            return disqualified;
+
+        return "qualified";
+    }
 }

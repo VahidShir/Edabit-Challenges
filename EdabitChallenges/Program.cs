@@ -6,7 +6,7 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine(Medium.CheckEquality(new {Name="n"}, new {Name="n"}));
+        Console.WriteLine(Hard.Interview(new int [] { 5, 5, 10, 10, 15, 15, 20 }, 120));
 
         Console.ReadLine();
     }
