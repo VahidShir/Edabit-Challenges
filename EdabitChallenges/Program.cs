@@ -6,7 +6,7 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine(Medium.IndexOfCapitals("STRIKE").ConcatString());
+        Console.WriteLine(Hard.IsSmooth("Rita asks Sam mean numbered dilemmas"));
 
         Console.ReadLine();
     }

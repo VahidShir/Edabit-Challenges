@@ -80,4 +80,73 @@ public static class Hard
 
         return "qualified";
     }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/SkY5Nw3rS7WvkQmFc">Link to challenge</see>
+    /// </summary>
+    public static bool IsSmooth(string sentence)
+    {
+        // "Carlos swam masterfully"
+        var words = sentence.ToLower().Split(" ");
+        var result = words.Select((item, index) => index == words.Length - 1 ? true :
+            item.EndsWith(words[index + 1][0]) ? true : false).All(x => x);
+
+        return result;
+    }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/SkY5Nw3rS7WvkQmFc">Link to challenge</see>
+    /// </summary>
+    public static bool IsSmoothV2(string sentence)
+    {
+        // "Carlos swam masterfully"
+        var words = sentence.ToLower().Split(" ");
+
+        for (var i = 0; i < words.Length - 1; i++)
+        {
+            if (words[i][^1] != words[i + 1][0])
+                return false;
+        }
+
+        return true;
+    }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/SkY5Nw3rS7WvkQmFc">Link to challenge</see>
+    /// </summary>
+    public static bool IsSmoothV3(string sentence)
+    {
+        // "Carlos swam masterfully"
+        var words = sentence.ToLower().Split(" ");
+
+        var result = words.Where((item, index) =>
+                    index != words.Length - 1 && item.EndsWith(words[index + 1][0])).Count() == words.Length - 1;
+
+
+        return result;
+    }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/SkY5Nw3rS7WvkQmFc">Link to challenge</see>
+    /// </summary>
+    public static bool IsSmoothV4(string sentence)
+    {
+        // "Carlos swam masterfully"
+
+        string normalizedSentence = sentence.ToLower();
+
+        int[] FindAllIndexOf(string s, char c){
+            return s.Select((b,i) => b == c ? i : -1).Where(i => i != -1).ToArray();
+        }
+
+        int[] spaceIndices = FindAllIndexOf(normalizedSentence, ' ');
+
+        foreach (var index in spaceIndices)
+        {
+            if (normalizedSentence[index - 1] != normalizedSentence[index + 1])
+                return false;
+        }
+
+        return true;
+    }
 }
