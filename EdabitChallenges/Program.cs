@@ -6,7 +6,7 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine(Hard.IsSmooth("Rita asks Sam mean numbered dilemmas"));
+        Console.WriteLine(VeryHard.Simplify("13/27"));
 
         Console.ReadLine();
     }
