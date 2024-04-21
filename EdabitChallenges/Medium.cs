@@ -49,9 +49,16 @@ public static class Medium
             if (char.IsUpper(v))
                 return index;
             else
-            return -1;
+                return -1;
         });
 
         return temp.Where(x => x != -1).ToArray();
     }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/JYEufqRvkusjr5R58">Link to challenge</see>
+    /// </summary>
+    public static string Bomb(string text) =>
+        text.Contains("bomb", StringComparison.InvariantCultureIgnoreCase) ?
+            "Duck!!!" : "There is no bomb, relax.";
 }
