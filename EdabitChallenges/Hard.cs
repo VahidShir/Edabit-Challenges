@@ -55,7 +55,7 @@ public static class Hard
     {
         Queue<char> vowelsQueue = new Queue<char>(vowels.ToArray());
 
-        return censoredText.Select(c => c == '*' ? vowelsQueue.Dequeue() : c).ConcatString();
+        return censoredText.Select(c => c == '*' ? vowelsQueue.Dequeue() : c).ConcatToString();
     }
 
     /// <summary>

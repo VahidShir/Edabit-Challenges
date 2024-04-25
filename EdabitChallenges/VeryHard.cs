@@ -51,4 +51,29 @@ public static class VeryHard
 
         return fraction;
     }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/8JegGd37XazwMJvs6">Link to challenge</see>
+    /// </summary>
+    public static string FiboWord(int n)
+    {
+        // 1, 1, 2, 3, 5, 8, 13, 21, …,
+        //FiboWord(3) ➞ "b, a, ab"
+
+        //FiboWord(7) ➞ "b, a, ab, aba, abaab, abaababa, abaababaabaab"
+        if (n < 2)
+            return "invalid";
+
+        string[] result = new string[n];
+
+        result[0] = "b";
+        result[1] = "a";
+
+        for (int i = 2; i < n; i++)
+        {
+            result[i] = result[i - 1] + result[i - 2];
+        }
+
+        return result.ConcatToString(", ");
+    }
 }

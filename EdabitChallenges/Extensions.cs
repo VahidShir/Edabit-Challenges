@@ -2,13 +2,13 @@
 
 public static class Extensions
 {
-    public static string ConcatString(this IEnumerable<char> input)
+    public static string ConcatToString<T>(this IEnumerable<T> input)
     {
         return string.Concat(input);
     }
 
-    public static string ConcatString(this IEnumerable<int> input)
+    public static string ConcatToString<T>(this IEnumerable<T> input, string separator)
     {
-        return string.Concat(input);
+        return string.Join(separator, input);
     }
 }

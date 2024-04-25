@@ -185,7 +185,7 @@ public static class Easy
     public static string LongBurp(int n)
     {
         var test = new string('r', 3);
-        return $"Bu{Enumerable.Repeat('r', n).ConcatString()}p";
+        return $"Bu{Enumerable.Repeat('r', n).ConcatToString()}p";
     }
 
     /// <summary>
