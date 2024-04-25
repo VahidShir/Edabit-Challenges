@@ -135,8 +135,9 @@ public static class Hard
 
         string normalizedSentence = sentence.ToLower();
 
-        int[] FindAllIndexOf(string s, char c){
-            return s.Select((b,i) => b == c ? i : -1).Where(i => i != -1).ToArray();
+        int[] FindAllIndexOf(string s, char c)
+        {
+            return s.Select((b, i) => b == c ? i : -1).Where(i => i != -1).ToArray();
         }
 
         int[] spaceIndices = FindAllIndexOf(normalizedSentence, ' ');
@@ -148,5 +149,25 @@ public static class Hard
         }
 
         return true;
+    }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/8tyXtHqAT3LAuHMqu">Link to challenge</see>
+    /// </summary>
+    public static bool IsValidHexCode(string sentence)
+    {
+        if (sentence[0] != '#')
+            return false;
+
+        try
+        {
+            Convert.FromHexString(sentence.Substring(1));
+
+            return true;
+        }
+        catch (Exception)
+        {
+            return false;
+        }
     }
 }
