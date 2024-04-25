@@ -61,4 +61,12 @@ public static class Medium
     public static string Bomb(string text) =>
         text.Contains("bomb", StringComparison.InvariantCultureIgnoreCase) ?
             "Duck!!!" : "There is no bomb, relax.";
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/hqTYj7NbLnCcjxryi">Link to challenge</see>
+    /// </summary>
+    public static string[] ParseArray (object[] arr)
+	{
+		return arr.Select(x => x.ToString()).ToArray();
+	}
 }
