@@ -65,8 +65,16 @@ public static class Medium
     /// <summary>
     /// <see href="https://edabit.com/challenge/hqTYj7NbLnCcjxryi">Link to challenge</see>
     /// </summary>
-    public static string[] ParseArray (object[] arr)
-	{
-		return arr.Select(x => x.ToString()).ToArray();
-	}
+    public static string[] ParseArray(object[] arr)
+    {
+        return arr.Select(x => x.ToString()).ToArray();
+    }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/nermqxzovZbfFBC9X">Link to challenge</see>
+    /// </summary>
+    public static double[] FindLargest(double[][] values)
+    {
+        return values.Select(x => x.Max()).ToArray();
+    }
 }
