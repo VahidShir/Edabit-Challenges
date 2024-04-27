@@ -52,4 +52,23 @@ public class HardTests
         Assert.Equal(result, actualResult);
 
     }
+
+    [Theory]
+    [InlineData(5, 31, 33,  1)]
+    [InlineData(4, 250, 1300,  3)]
+    [InlineData(2, 49, 65,  2)]
+    [InlineData(3, 1, 27,  3)]
+    [InlineData(10, 1, 5,  1)]
+    [InlineData(1, 1, 5,  5)]
+    [InlineData(2, 1, 100,  10)]
+
+    public void PowerRanger(int n, int min, int max, int expectedResult)
+    {
+        //Act
+        int actualResult = Hard.PowerRanger(n, min, max);
+
+        //Assert
+        Assert.Equal(expectedResult, actualResult);
+
+    }
 }

@@ -170,4 +170,45 @@ public static class Hard
             return false;
         }
     }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/McGCFZYn8ikn3GSqz">Link to challenge</see>
+    /// </summary>
+    public static int PowerRanger(int power, int min, int max)
+    {
+        int counter = 0;
+        var x = Math.Pow(min, 1.0 / power);
+        while (Math.Pow(x, power) <= max)
+        {
+            counter++;
+            x++;
+        }
+
+        return counter;
+    }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/McGCFZYn8ikn3GSqz">Link to challenge</see>
+    /// </summary>
+    public static int PowerRangerV2(int power, int min, int max)
+    {
+        int counter = 0;
+        int num = 0;
+
+        while (true)
+        {
+            var powered = (int)Math.Pow(counter, power);
+
+            if (powered >= min && powered <= max)
+            {
+                num++;
+            }
+            else if (powered > max)
+            {
+                return num;
+            }
+
+            counter++;
+        }
+    }
 }
