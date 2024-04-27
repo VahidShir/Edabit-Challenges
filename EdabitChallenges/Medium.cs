@@ -77,4 +77,12 @@ public static class Medium
     {
         return values.Select(x => x.Max()).ToArray();
     }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/ZSvj2W3J6QRydkyh2">Link to challenge</see>
+    /// </summary>
+    public static string CountAll(string txt)
+    {
+        return (new { LETTERS = txt.Count(char.IsLetter), DIGITS = txt.Count(char.IsDigit) }).ToString();
+    }
 }

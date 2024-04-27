@@ -6,7 +6,7 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine(Hard.PowerRanger(3, 1, 27));
+        Console.WriteLine(Medium.CountAll("aa33"));
 
         Console.ReadLine();
     }
