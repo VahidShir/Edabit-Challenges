@@ -85,4 +85,29 @@ public static class Medium
     {
         return (new { LETTERS = txt.Count(char.IsLetter), DIGITS = txt.Count(char.IsDigit) }).ToString();
     }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/F6m5ZRyzK5fmqTrBG">Link to challenge</see>
+    /// </summary>
+    public static int Collatz(int num)
+    {
+
+        int steps = 0;
+
+        while (num != 1)
+        {
+            if (num % 2 == 0)
+            {
+                num /= 2;
+            }
+            else
+            {
+                num = num * 3 + 1;
+            }
+
+            steps++;
+        }
+
+        return steps;
+    }
 }
