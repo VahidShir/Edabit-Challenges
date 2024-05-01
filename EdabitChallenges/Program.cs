@@ -1,15 +1,10 @@
-﻿using System.Linq;
-
-using static System.Net.Mime.MediaTypeNames;
-
-namespace EdabitChallenges;
+﻿namespace EdabitChallenges;
 
 internal class Program
 {
     static void Main(string[] args)
-    {
-
-        Console.WriteLine(VeryHard.MaxOccur("tests"));
+    {      
+        Console.WriteLine(VeryHard.UniqueFract());
 
         Console.ReadLine();
     }

@@ -82,12 +82,32 @@ public static class VeryHard
     /// </summary>
     public static string MaxOccur(string text)
     {
-        var occurences = text.GroupBy(x => x).Select(x => new {Character = x.Key, Count = x.Count() });
+        var occurences = text.GroupBy(x => x).Select(x => new { Character = x.Key, Count = x.Count() });
 
-        var mostOccurrence = occurences.Max(x=> x.Count);
+        var mostOccurrence = occurences.Max(x => x.Count);
         if (mostOccurrence == 1)
             return "No Repetition";
-       return occurences.Where(x => x.Count == mostOccurrence).Select(x => x.Character).ConcatToString(", ");
-        
+        return occurences.Where(x => x.Count == mostOccurrence).Select(x => x.Character).ConcatToString(", ");
+
+    }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/FXt7yKLgFi7SW6JBa">Link to challenge</see>
+    /// </summary>
+    public static double UniqueFract()
+    {
+        HashSet<double> divideds = new HashSet<double>();
+        double sum = 0;
+        for (int i = 1; i < 9; i++)
+        {
+            for (int j = i + 1; j <= 9; j++)
+            {
+                var divided = ((double)i / j);
+                if (divideds.Add(divided))
+                    sum += divided;
+            }
+        }
+
+        return sum;
     }
 }
