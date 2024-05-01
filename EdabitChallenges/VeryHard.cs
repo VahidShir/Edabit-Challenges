@@ -76,4 +76,18 @@ public static class VeryHard
 
         return result.ConcatToString(", ");
     }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/vtdfueRCmpRGyLAGs">Link to challenge</see>
+    /// </summary>
+    public static string MaxOccur(string text)
+    {
+        var occurences = text.GroupBy(x => x).Select(x => new {Character = x.Key, Count = x.Count() });
+
+        var mostOccurrence = occurences.Max(x=> x.Count);
+        if (mostOccurrence == 1)
+            return "No Repetition";
+       return occurences.Where(x => x.Count == mostOccurrence).Select(x => x.Character).ConcatToString(", ");
+        
+    }
 }
