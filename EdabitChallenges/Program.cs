@@ -3,8 +3,8 @@
 internal class Program
 {
     static void Main(string[] args)
-    {      
-        Console.WriteLine(VeryHard.UniqueFract());
+    {
+        Console.WriteLine(Medium.CounterpartCharCode('a'));
 
         Console.ReadLine();
     }

@@ -110,4 +110,12 @@ public static class Medium
 
         return steps;
     }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/zaokQWNdEudmFWpk7">Link to challenge</see>
+    /// </summary>
+    public static int CounterpartCharCode(char symbol)
+    {
+        return char.IsLower(symbol) ? char.ToUpper(symbol) : char.ToLower(symbol);
+    }
 }
