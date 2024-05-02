@@ -118,4 +118,12 @@ public static class Medium
     {
         return char.IsLower(symbol) ? char.ToUpper(symbol) : char.ToLower(symbol);
     }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/zn3A3AAzoE7vezw7Q">Link to challenge</see>
+    /// </summary>
+    public static int CountOnes(int i)
+    {
+        return Convert.ToString(i, 2).Count(x => x == '1');   
+    }
 }
