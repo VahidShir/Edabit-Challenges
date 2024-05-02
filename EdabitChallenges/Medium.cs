@@ -124,6 +124,17 @@ public static class Medium
     /// </summary>
     public static int CountOnes(int i)
     {
-        return Convert.ToString(i, 2).Count(x => x == '1');   
+        return Convert.ToString(i, 2).Count(x => x == '1');
     }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/SXeEZPxDM9Y5HzLvw">Link to challenge</see>
+    /// </summary>
+    public static int[] CountPosSumNeg(double[] arr)
+    {
+        if (arr.Length == 0)
+            return [];
+
+        return [arr.Count(i => i > 0), (int)arr.Where(i => i < 0).Sum()];
+    } 
 }
