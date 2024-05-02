@@ -136,5 +136,16 @@ public static class Medium
             return [];
 
         return [arr.Count(i => i > 0), (int)arr.Where(i => i < 0).Sum()];
-    } 
+    }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/gBYEFXeD9G2JMZ9dD">Link to challenge</see>
+    /// </summary>
+    public static bool ValidatePIN(string pin)
+    {
+        if (pin.Length is not 4 and not 6)
+            return false;
+
+        return pin.All(char.IsDigit) ;
+    }
 }
