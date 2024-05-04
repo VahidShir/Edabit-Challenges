@@ -2,6 +2,7 @@ using EdabitChallenges;
 
 using Microsoft.VisualStudio.TestPlatform.TestHost;
 
+
 namespace Tests;
 
 public class HardTests
@@ -106,3 +107,4 @@ public class HardTests
         Assert.Equal(expectedResult, actualResult);
     }
 }
+
