@@ -4,7 +4,8 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine(Medium.ValidatePIN("1a45"));
+        Console.WriteLine(Hard. ProductEqualTarget(new int[] { 2, 3, 5 }, 600).ConcatToString(", "));
+        Console.WriteLine(Hard. ProductEqualTargetV2(new int[] { 2, 3, 5 }, 600).ConcatToString(", "));
 
         Console.ReadLine();
     }

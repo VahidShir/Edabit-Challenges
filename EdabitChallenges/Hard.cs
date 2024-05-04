@@ -211,4 +211,50 @@ public static class Hard
             counter++;
         }
     }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/E4eAyJLjgGssf7GFJ">Link to challenge</see>
+    /// </summary>
+    public static int[] ProductEqualTarget(int[] arr, int target)
+    {
+        int power = 1;
+        int[] result = new int[arr.Length];
+        while (target > 1)
+        {
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (target % arr[i] == 0)
+                {
+                    result[i] = power;
+                    target /= arr[i];
+                }
+            }
+            power++;
+        }
+
+        return result;
+    }
+
+        /// <summary>
+    /// <see href="https://edabit.com/challenge/E4eAyJLjgGssf7GFJ">Link to challenge</see>
+    /// </summary>
+    public static int[] ProductEqualTargetV2(int[] arr, int target)
+    {
+        int[] result = new int[arr.Length];
+
+        for (int i = 0; i < arr.Length; i++)
+        {
+            int power = 0;
+
+            while (target % arr[i] == 0)
+            {
+                target = target / arr[i];
+                power++;
+            }
+
+            result[i] = power;
+        }
+
+        return result;
+    }
 }
