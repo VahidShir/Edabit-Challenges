@@ -4,8 +4,7 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine(Hard. ProductEqualTarget(new int[] { 2, 3, 5 }, 600).ConcatToString(", "));
-        Console.WriteLine(Hard. ProductEqualTargetV2(new int[] { 2, 3, 5 }, 600).ConcatToString(", "));
+        Console.WriteLine(VeryHard.OverTime(new[] { 18, 20, 32.5, 2 }));
 
         Console.ReadLine();
     }

@@ -110,4 +110,40 @@ public static class VeryHard
 
         return sum;
     }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/rkzH6YsPNgoJjn75i">Link to challenge</see>
+    /// </summary>
+    public static string OverTime(double[] arr)
+    {
+        double startHourDouble = arr[0];
+        double endHourDouble = arr[1];
+
+        string normalizedStartHourString = string.Format("{00:00.00}", startHourDouble).Replace('.', ':');
+        string normalizedEndHourString = string.Format("{00:00.00}", endHourDouble).Replace('.', ':');
+        TimeOnly startHour = TimeOnly.Parse(normalizedStartHourString);
+        TimeOnly endHour = TimeOnly.Parse(normalizedEndHourString);
+
+        TimeSpan workingHour = TimeSpan.Zero;
+        TimeSpan overTimeHour = TimeSpan.Zero;
+        if (startHour.Hour >= 17)
+            overTimeHour = endHour - startHour;
+        else
+        {
+            if (endHour.Hour >= 17)
+            {
+                workingHour = new TimeOnly(17, 0) - startHour;
+                overTimeHour = endHour - new TimeOnly(17, 0);
+            }
+            else
+                workingHour = endHour - startHour;
+        }
+
+        var workingPayment = workingHour.TotalMinutes * (arr[2] / 60);
+        var overtimePayment = overTimeHour.TotalMinutes * (arr[2] / 60) * arr[3];
+
+        double totalPayment = workingPayment + overtimePayment;
+        double roundedTotlaPayment = Math.Round(totalPayment,2, MidpointRounding.AwayFromZero);
+        return roundedTotlaPayment.ToString("C2");
+    }
 }
