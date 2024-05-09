@@ -146,6 +146,23 @@ public static class Medium
         if (pin.Length is not 4 and not 6)
             return false;
 
-        return pin.All(char.IsDigit) ;
+        return pin.All(char.IsDigit);
+    }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/JF25KTZEcPzXhBvpM">Link to challenge</see>
+    /// </summary>
+    public static string GetMiddle(string str)
+    {
+        int length = str.Length;
+
+        if (length % 2 == 0)
+        {
+            return $"{str[length / 2 - 1]}{str[length / 2]}";
+        }
+        else
+        {
+            return str[length / 2].ToString();
+        }
     }
 }
