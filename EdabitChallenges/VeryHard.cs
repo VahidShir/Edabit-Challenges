@@ -143,7 +143,51 @@ public static class VeryHard
         var overtimePayment = overTimeHour.TotalMinutes * (arr[2] / 60) * arr[3];
 
         double totalPayment = workingPayment + overtimePayment;
-        double roundedTotlaPayment = Math.Round(totalPayment,2, MidpointRounding.AwayFromZero);
+        double roundedTotlaPayment = Math.Round(totalPayment, 2, MidpointRounding.AwayFromZero);
         return roundedTotlaPayment.ToString("C2");
+    }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/6S2aJYTjAka94muDT">Link to challenge</see>
+    /// </summary>
+    public static int[] TrackRobot(string steps)
+    {
+        var point = new[] { 0, 0 };
+        if (string.IsNullOrEmpty(steps))
+        {
+            return point;
+        }
+
+        var faces = new[] { "east", "north", "west", "south" };
+        var faceIndex = 0;
+        foreach (var step in steps)
+        {
+            if (step == '.')
+                switch (faces[faceIndex])
+                {
+                    case "east":
+                        point[0] += 1;
+                        break;
+                    case "west":
+                        point[0] -= 1;
+                        break;
+                    case "north":
+                        point[1] += 1;
+                        break;
+                    case "south":
+                        point[1] -= 1;
+                        break;
+                }
+            else
+            {
+                if (step == '<')
+                    faceIndex = faceIndex == faces.Length - 1 ? 0 : faceIndex + 1;
+                else if (step == '>')
+                    faceIndex = faceIndex == 0 ? faces.Length - 1 : faceIndex - 1;
+
+            }
+        }
+        return point;
+
     }
 }

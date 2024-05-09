@@ -1,5 +1,7 @@
 ﻿using EdabitChallenges;
 
+using Microsoft.VisualStudio.TestPlatform.TestHost;
+
 using NUnit.Framework;
 using NUnit.Framework.Legacy;
 
@@ -25,5 +27,17 @@ public class VeryHardTests
         ClassicAssert.AreEqual("$130.00",VeryHard.OverTime([18, 20, 32.5, 2]));
         ClassicAssert.AreEqual("$47.50", VeryHard.OverTime(new[] { 13.25, 15, 30, 1.5 }));
         ClassicAssert.AreEqual("$432.32",VeryHard.OverTime(new[] { 13, 21, 38.6, 1.8 }));
+    }
+
+    [Test]
+    [TestCase("..<.<.", ExpectedResult=new int[] { 1, 1 })]
+	[TestCase("....................................................................................................", ExpectedResult=new int[] {100,0})]
+	[TestCase("<>>>><><<<><>>>><><<<><>>><>", ExpectedResult=new int[] { 0, 0 })]
+	[TestCase(".<..<...<....<.....<......", ExpectedResult=new int[] { 3, 4 })]
+	[TestCase(">>..", ExpectedResult=new int[] { -2, 0 })]
+	[TestCase("..<<..>>..<<..>>..", ExpectedResult=new int[] { 2, 0 })]
+    public static int[] TestSolution(string steps)
+    {
+        return VeryHard.TrackRobot(steps);
     }
 }
