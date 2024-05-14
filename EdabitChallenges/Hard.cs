@@ -1,4 +1,6 @@
-﻿namespace EdabitChallenges;
+﻿using System.Globalization;
+
+namespace EdabitChallenges;
 
 public static class Hard
 {
@@ -235,7 +237,7 @@ public static class Hard
         return result;
     }
 
-        /// <summary>
+    /// <summary>
     /// <see href="https://edabit.com/challenge/E4eAyJLjgGssf7GFJ">Link to challenge</see>
     /// </summary>
     public static int[] ProductEqualTargetV2(int[] arr, int target)
@@ -256,5 +258,15 @@ public static class Hard
         }
 
         return result;
+    }
+
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/y4esBva2cYph5QKg5">Link to challenge</see>
+    /// </summary>
+    public static string WeekAfter(string date)
+    {
+        return DateTime.ParseExact(date, "dd/MM/yyyy", CultureInfo.InvariantCulture).AddDays(7).ToString("dd/MM/yyyy");
+
     }
 }
