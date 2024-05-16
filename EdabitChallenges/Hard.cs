@@ -294,4 +294,39 @@ public static class Hard
         var sorted = arr.Order().ToArray();
         return sorted[^1] - sorted[0] == sorted.Length - 1;
     }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/X3btpQQEBeezX4jhK">Link to challenge</see>
+    /// </summary>
+    public static string CupSwapping(string[] swaps)
+    {
+        //cupSwapping(["AB", "CA", "AB"]) ➞ "C"
+        var lastPosition = "B";
+        foreach (var sw in swaps)
+        {
+            if (sw.Contains(lastPosition))
+                lastPosition = sw.Replace(lastPosition, string.Empty);
+        }
+        return lastPosition;
+    }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/X3btpQQEBeezX4jhK">Link to challenge</see>
+    /// </summary>
+    public static string CupSwapping2(string[] swaps)
+    {
+
+        char position = 'B';
+
+        foreach (var item in swaps)
+        {
+            if (item.ToUpper().Contains(position))
+            {
+                //setting new position
+                position = char.ToUpper(item.First(c => c != position));
+            }
+        }
+
+        return position.ToString();
+    }
 }

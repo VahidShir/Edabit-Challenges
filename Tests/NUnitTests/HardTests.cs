@@ -3,6 +3,7 @@
 using Microsoft.VisualStudio.TestPlatform.TestHost;
 
 using NUnit.Framework;
+using NUnit.Framework.Legacy;
 
 namespace Tests.NUnitTests;
 
@@ -96,12 +97,26 @@ public class HardTests
     }
 
     [Test]
-	[TestCase(new int[]{5, 1, 4, 3, 2}, ExpectedResult = true)]
-	[TestCase(new int[]{55, 59, 58, 56, 57}, ExpectedResult = true)]
-	[TestCase(new int[]{-3, -2, -1, 1, 0}, ExpectedResult = true)]
-	[TestCase(new int[]{5, 1, 4, 3, 2, 8}, ExpectedResult = false)]
-	[TestCase(new int[]{5, 6, 7, 8, 9, 9}, ExpectedResult = false)]
-	[TestCase(new int[]{5, 3}, ExpectedResult = false)]
-	public static bool FixedTest(int[] arr) =>
-		Hard.Cons(arr);
+    [TestCase(new int[] { 5, 1, 4, 3, 2 }, ExpectedResult = true)]
+    [TestCase(new int[] { 55, 59, 58, 56, 57 }, ExpectedResult = true)]
+    [TestCase(new int[] { -3, -2, -1, 1, 0 }, ExpectedResult = true)]
+    [TestCase(new int[] { 5, 1, 4, 3, 2, 8 }, ExpectedResult = false)]
+    [TestCase(new int[] { 5, 6, 7, 8, 9, 9 }, ExpectedResult = false)]
+    [TestCase(new int[] { 5, 3 }, ExpectedResult = false)]
+    public static bool FixedTest(int[] arr) =>
+        Hard.Cons(arr);
+
+    [Test]
+    public void TestCupSwapping()
+    {
+        var i = 1;
+        ClassicAssert.AreEqual(Hard.CupSwapping(new String[] { "AB", "CA" }), "C", $"Test {i++}");
+        ClassicAssert.AreEqual(Hard.CupSwapping(new String[] { "AB", "CA", "AB" }), "C", $"Test {i++}");
+        ClassicAssert.AreEqual(Hard.CupSwapping(new String[] { "AC", "CA", "CA", "AC" }), "B", $"Test {i++}");
+        ClassicAssert.AreEqual(Hard.CupSwapping(new String[] { "BA", "AC", "CA", "BC" }), "A", $"Test {i++}");
+        ClassicAssert.AreEqual(Hard.CupSwapping(new String[] { "BC", "CB", "CA", "BA" }), "A", $"Test {i++}");
+        ClassicAssert.AreEqual(Hard.CupSwapping(new String[] { "BC" }), "C", $"Test {i++}");
+        ClassicAssert.AreEqual(Hard.CupSwapping(new String[] { "BA", "CA", "CB", "CA" }), "B", $"Test {i++}");
+        ClassicAssert.AreEqual(Hard.CupSwapping(new String[] { }), "B", $"Test {i++}");
+    }
 }
