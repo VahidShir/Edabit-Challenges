@@ -190,4 +190,21 @@ public static class VeryHard
         return point;
 
     }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/HfpK34Ty4SZhN2d9e">Link to challenge</see>
+    /// </summary>
+    public static int License(string me, int agents, string others)
+    {
+        // License("Eric", 2, "Adam Caroline Rebecca Frank") ➞ 40
+        // Adam, Caroline, Eric, Frank, Rebecca ==> 5 / 2 = 3. Eric 
+
+        string[] people = (me + " " + others).Split(' ').Order().ToArray();
+
+        List<string[]> groups = people.Chunk(agents).ToList();
+
+        var index = groups.FindIndex(group => group.Contains(me));
+
+        return (index + 1) * 20;
+    }
 }
