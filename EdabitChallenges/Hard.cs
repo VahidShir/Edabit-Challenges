@@ -329,4 +329,35 @@ public static class Hard
 
         return position.ToString();
     }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/g88PKZrCY6sWPBva7">Link to challenge</see>
+    /// </summary>
+    public static int[] TrackRobot(string[] instructions)
+    {
+        //{ "right 10", "up 50", "left 30", "down 10" }
+        int x = 0, y = 0;
+        foreach (var instruction in instructions)
+        {
+            var arrow = instruction.Split(" ")[0];
+            var distance = int.Parse(instruction.Split(" ")[1]);
+
+            switch (arrow)
+            {
+                case "right":
+                    x += distance;
+                    break;
+                case "left":
+                    x -= distance;
+                    break;
+                case "up":
+                    y += distance;
+                    break;
+                case "down":
+                    y -= distance;
+                    break;
+            };
+        }
+        return [x, y];
+    }
 }

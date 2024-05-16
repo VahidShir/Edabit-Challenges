@@ -119,4 +119,20 @@ public class HardTests
         ClassicAssert.AreEqual(Hard.CupSwapping(new String[] { "BA", "CA", "CB", "CA" }), "B", $"Test {i++}");
         ClassicAssert.AreEqual(Hard.CupSwapping(new String[] { }), "B", $"Test {i++}");
     }
+
+    	[Test]
+    public static void TestSolution()
+    {	
+		var inst1 = new string[] { "right 10", "up 50", "left 30", "down 10" };
+		var inst2 = new string[] {  };
+		var inst3 = new string[] { "left 10", "left 100", "left 1000", "left 10000" };
+		var inst4 = new string[] { "right 100", "right 100", "up 500", "up 10000" }; 
+		var inst5 = new string[] { "left 10", "right 10", "down 10", "up 10" };
+
+        ClassicAssert.AreEqual(new int[] { 0, 0 }, Hard.TrackRobot(inst2));
+        ClassicAssert.AreEqual(new int[] { -11110, 0 }, Hard.TrackRobot(inst3));
+        ClassicAssert.AreEqual(new int[] { 200, 10500 }, Hard.TrackRobot(inst4));
+        ClassicAssert.AreEqual(new int[] { -20, 40 }, Hard.TrackRobot(inst1));
+        ClassicAssert.AreEqual(new int[] { 0, 0 }, Hard.TrackRobot(inst5));
+    }
 }
