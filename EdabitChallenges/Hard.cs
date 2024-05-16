@@ -269,4 +269,29 @@ public static class Hard
         return DateTime.ParseExact(date, "dd/MM/yyyy", CultureInfo.InvariantCulture).AddDays(7).ToString("dd/MM/yyyy");
 
     }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/wXCzoLtvvEEYBs3p9">Link to challenge</see>
+    /// </summary>
+    public static int DuplicateCount(string str)
+    {
+        return str.GroupBy(c => c).Select(c => c.Count()).Count(c => c > 1);
+    }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/wXCzoLtvvEEYBs3p9">Link to challenge</see>
+    /// </summary>
+    public static int DuplicateCount2(string str)
+    {
+        return str.CountBy(x => x).Count(c => c.Value > 1);
+    }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/TAZywz6R2hu9tDQWc">Link to challenge</see>
+    /// </summary>
+    public static bool Cons(int[] arr)
+    {
+        var sorted = arr.Order().ToArray();
+        return sorted[^1] - sorted[0] == sorted.Length - 1;
+    }
 }
