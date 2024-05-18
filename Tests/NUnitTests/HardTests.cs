@@ -120,14 +120,14 @@ public class HardTests
         ClassicAssert.AreEqual(Hard.CupSwapping(new String[] { }), "B", $"Test {i++}");
     }
 
-    	[Test]
+    [Test]
     public static void TestSolution()
-    {	
-		var inst1 = new string[] { "right 10", "up 50", "left 30", "down 10" };
-		var inst2 = new string[] {  };
-		var inst3 = new string[] { "left 10", "left 100", "left 1000", "left 10000" };
-		var inst4 = new string[] { "right 100", "right 100", "up 500", "up 10000" }; 
-		var inst5 = new string[] { "left 10", "right 10", "down 10", "up 10" };
+    {
+        var inst1 = new string[] { "right 10", "up 50", "left 30", "down 10" };
+        var inst2 = new string[] { };
+        var inst3 = new string[] { "left 10", "left 100", "left 1000", "left 10000" };
+        var inst4 = new string[] { "right 100", "right 100", "up 500", "up 10000" };
+        var inst5 = new string[] { "left 10", "right 10", "down 10", "up 10" };
 
         ClassicAssert.AreEqual(new int[] { 0, 0 }, Hard.TrackRobot(inst2));
         ClassicAssert.AreEqual(new int[] { -11110, 0 }, Hard.TrackRobot(inst3));
@@ -137,15 +137,31 @@ public class HardTests
     }
 
     [Test]
-    [TestCase(10, 15, ExpectedResult="a")]
-	[TestCase(13, 16, ExpectedResult="b")]
-	[TestCase(53782, 72534, ExpectedResult="b")]
-	[TestCase(72221, 11198, ExpectedResult="b")]
-	[TestCase(1723817263, 837249873748, ExpectedResult="a")]
-	[TestCase(556238, 667822, ExpectedResult="b")]
-	[TestCase(4, 3, ExpectedResult="a")]
-  	public static string TestSolution(Int64 a, Int64 b)
+    [TestCase(10, 15, ExpectedResult = "a")]
+    [TestCase(13, 16, ExpectedResult = "b")]
+    [TestCase(53782, 72534, ExpectedResult = "b")]
+    [TestCase(72221, 11198, ExpectedResult = "b")]
+    [TestCase(1723817263, 837249873748, ExpectedResult = "a")]
+    [TestCase(556238, 667822, ExpectedResult = "b")]
+    [TestCase(4, 3, ExpectedResult = "a")]
+    public static string TestSolution(Int64 a, Int64 b)
     {
         return Hard.Collatz(a, b);
+    }
+
+    [Test]
+    [TestCase("abcdcbg", ExpectedResult = true)]
+    [TestCase("abccia", ExpectedResult = true)]
+    [TestCase("abcdaaa", ExpectedResult = false)]
+    [TestCase("gggfgig", ExpectedResult = true)]
+    [TestCase("gggffff", ExpectedResult = false)]
+    [TestCase("GIGGG", ExpectedResult = true)]
+    [TestCase("ggggi", ExpectedResult = true)]
+    [TestCase("ggggg", ExpectedResult = false, Description = "Should return false if already palindrome.")]
+    [TestCase("gggfggg", ExpectedResult = false, Description = "Should return false if already palindrome.")]
+    [TestCase("1234312", ExpectedResult = false)]
+    public static bool AlmostPalindrome(string str)
+    {
+        return Hard.AlmostPalindrome(str);
     }
 }

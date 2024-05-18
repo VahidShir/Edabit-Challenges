@@ -374,7 +374,50 @@ public static class Hard
         {
             if (x == 1)
                 return 0;
-            return GetSteps(x % 2 == 0 ? x / 2 : x * 3 + 1)+1;
+            return GetSteps(x % 2 == 0 ? x / 2 : x * 3 + 1) + 1;
         }
+    }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/t6R99zCQ7nesR7Rdk">Link to challenge</see>
+    /// </summary>
+    public static bool AlmostPalindrome(string str)
+    {
+        int diff = 0;
+        for (int i = 0; i < str.Length / 2; i++)
+        {
+            if (str[i] != str[^(i + 1)])
+            {
+                diff++;
+                if (diff > 1)
+                {
+                    return false;
+                }
+            }
+        }
+        return diff == 1 ? true : false;
+    }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/t6R99zCQ7nesR7Rdk">Link to challenge</see>
+    /// </summary>
+    public static bool AlmostPalindromeV2(string str)
+    {
+        string p = string.Concat(str.Reverse());
+
+        return str.Select((c, i) => c == p[i]).Count(b => b) == str.Length - 2 ? true : false;
+    }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/t6R99zCQ7nesR7Rdk">Link to challenge</see>
+    /// </summary>
+    public static bool AlmostPalindromeV3(string str)
+    {
+        //abccia
+        //aiccba
+        string reverseStr = string.Concat(str.Reverse());
+
+        var diffCount = str.Zip(reverseStr, (first, second) => first != second).Count(diff => diff == true);
+        return diffCount == 2 ? true : false;
     }
 }
