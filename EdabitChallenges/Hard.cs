@@ -360,4 +360,21 @@ public static class Hard
         }
         return [x, y];
     }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/Bos7jCrynkgG9dAJ5">Link to challenge</see>
+    /// </summary>
+    public static string Collatz(Int64 a, Int64 b)
+    {
+        //If even: divide by 2.
+        //If odd: multiply by 3, then add 1.
+        return GetSteps(a) < GetSteps(b) ? "a" : "b";
+
+        int GetSteps(long x)
+        {
+            if (x == 1)
+                return 0;
+            return GetSteps(x % 2 == 0 ? x / 2 : x * 3 + 1)+1;
+        }
+    }
 }

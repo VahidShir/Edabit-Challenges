@@ -135,4 +135,17 @@ public class HardTests
         ClassicAssert.AreEqual(new int[] { -20, 40 }, Hard.TrackRobot(inst1));
         ClassicAssert.AreEqual(new int[] { 0, 0 }, Hard.TrackRobot(inst5));
     }
+
+    [Test]
+    [TestCase(10, 15, ExpectedResult="a")]
+	[TestCase(13, 16, ExpectedResult="b")]
+	[TestCase(53782, 72534, ExpectedResult="b")]
+	[TestCase(72221, 11198, ExpectedResult="b")]
+	[TestCase(1723817263, 837249873748, ExpectedResult="a")]
+	[TestCase(556238, 667822, ExpectedResult="b")]
+	[TestCase(4, 3, ExpectedResult="a")]
+  	public static string TestSolution(Int64 a, Int64 b)
+    {
+        return Hard.Collatz(a, b);
+    }
 }
