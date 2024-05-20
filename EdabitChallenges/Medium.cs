@@ -203,7 +203,34 @@ public static class Medium
         }
         else
         {
-            return string.Concat(str.Substring(0, str.Length - 4).Select( x => "#")) + str.Substring(str.Length - 4);
+            return string.Concat(str.Substring(0, str.Length - 4).Select(x => "#")) + str.Substring(str.Length - 4);
         }
+    }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/b5HL5ju3Fpx5zjoXn">Link to challenge</see>
+    /// </summary>
+    public static int Gcd(int n1, int n2)
+    {
+        //ToDo
+        return 0;
+    }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/b5HL5ju3Fpx5zjoXn">Link to challenge</see>
+    /// </summary>
+    public static int Tetra(int n)
+    {
+        //ToDo
+        return 0;
+    }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/zcuASzWmpFHpPtrbH">Link to challenge</see>
+    /// </summary>
+    public static string HighLow(string str)
+    {
+        var numbers = str.Split(" ").Select(int.Parse);
+        return $"{numbers.Max()} {numbers.Min()}";
     }
 }

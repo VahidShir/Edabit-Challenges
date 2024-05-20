@@ -11,6 +11,20 @@ namespace Tests.NUnitTests;
 public class Mediumtests
 {
     [Test]
+    [TestCase("4 5 29 54 4 0 -214 542 -64 1 -3 6 -6", ExpectedResult = "542 -214")]
+    [TestCase("1 -1", ExpectedResult = "1 -1")]
+    [TestCase("-1 -1", ExpectedResult = "-1 -1")]
+    [TestCase("1 -1 0", ExpectedResult = "1 -1")]
+    [TestCase("1 1 0", ExpectedResult = "1 0")]
+    [TestCase("-1 -1 0", ExpectedResult = "0 -1")]
+    [TestCase("42", ExpectedResult = "42 42")]
+    [TestCase("1 1", ExpectedResult = "1 1")]
+    public static string HighLow(string str)
+    {
+        return Medium.HighLow(str);
+    }
+
+    [Test]
     [TestCase("test", ExpectedResult = "es")]
     [TestCase("testing", ExpectedResult = "t")]
     [TestCase("middle", ExpectedResult = "dd")]
@@ -57,7 +71,7 @@ public class Mediumtests
     [TestCase("2673951408", ExpectedResult = "######1408")]
     [TestCase("1234", ExpectedResult = "1234")]
 
-    public static string FixedTest(string str)
+    public static string MaskifyV2(string str)
     {
         return Medium.MaskifyV2(str);
     }
