@@ -1,4 +1,6 @@
-﻿namespace EdabitChallenges;
+﻿using System.Reflection.Metadata.Ecma335;
+
+namespace EdabitChallenges;
 
 public static class Medium
 {
@@ -163,6 +165,45 @@ public static class Medium
         else
         {
             return str[length / 2].ToString();
+        }
+    }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/oedhscMcJBsD4fMo3">Link to challenge</see>
+    /// </summary>
+    public static int square_areas_difference(int radius)
+    {
+        //ToDo
+        return 0;
+    }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/RFeBL2TzSf7mRMNJi">Link to challenge</see>
+    /// </summary>
+    public static string Maskify(string str)
+    {
+        if (str.Length < 5)
+        {
+            return str;
+        }
+        else
+        {
+            return $"{string.Concat(Enumerable.Repeat("#", str.Length - 4))}{string.Concat(str.Take(^4..))}";
+        }
+    }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/RFeBL2TzSf7mRMNJi">Link to challenge</see>
+    /// </summary>
+    public static string MaskifyV2(string str)
+    {
+        if (str.Length < 5)
+        {
+            return str;
+        }
+        else
+        {
+            return string.Concat(str.Substring(0, str.Length - 4).Select( x => "#")) + str.Substring(str.Length - 4);
         }
     }
 }
