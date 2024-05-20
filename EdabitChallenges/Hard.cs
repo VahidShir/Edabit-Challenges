@@ -420,4 +420,13 @@ public static class Hard
         var diffCount = str.Zip(reverseStr, (first, second) => first != second).Count(diff => diff == true);
         return diffCount == 2 ? true : false;
     }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/bqveyPRgcWZM7XzMQ">Link to challenge</see>
+    /// </summary>
+    public static string MysteryFunc(string str)
+    {
+        IEnumerable<string> result = str.Select((c, index) => index % 2 == 0 ? new string(c, int.Parse(str[index + 1].ToString())) : "");
+        return string.Concat(result);
+    }
 }

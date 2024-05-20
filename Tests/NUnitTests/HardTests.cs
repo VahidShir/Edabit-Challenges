@@ -164,4 +164,14 @@ public class HardTests
     {
         return Hard.AlmostPalindrome(str);
     }
+
+    [Test]
+    [TestCase("A4B5C2", ExpectedResult = "AAAABBBBBCC")]
+    [TestCase("C2F1E5", ExpectedResult = "CCFEEEEE")]
+    [TestCase("T4S2V2", ExpectedResult = "TTTTSSVV")]
+    [TestCase("A1B2C3D4", ExpectedResult = "ABBCCCDDDD")]
+    public static string MysteryFunc(string str)
+    {
+        return Hard.MysteryFunc(str);
+    }
 }
