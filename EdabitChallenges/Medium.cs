@@ -5,6 +5,14 @@ namespace EdabitChallenges;
 public static class Medium
 {
     /// <summary>
+    /// <see href="https://edabit.com/challenge/4eSei6t8emzpyMwvu">Link to challenge</see>
+    /// </summary>
+    public static int[] FilterArray(object[] arr)
+    {
+        return arr.Where(x => x is int).Select(x => (int)x).ToArray();
+    }
+
+    /// <summary>
     /// <see href="https://edabit.com/challenge/2QvnWexKoLfcJkSsc">Link to challenge</see>
     /// </summary>
     public static int[] ArrayOfMultiples(int num, int length)

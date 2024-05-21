@@ -7,7 +7,7 @@ internal class Program
     static void Main(string[] args)
     {
 
-        Console.WriteLine(VeryHard.TrackRobot(steps: "..<.<.").ConcatToString(", "));
+        Console.WriteLine(Medium.FilterArray([1, 2, "aasf", "1", "123", 123]).ConcatToString(" "));
 
         Console.ReadLine();
     }
