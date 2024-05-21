@@ -207,4 +207,20 @@ public static class VeryHard
 
         return (index + 1) * 20;
     }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/BxiTHaprzDiTvdSA4">Link to challenge</see>
+    /// </summary>
+    public static string[] SortContacts(string[] names, string sort)
+    {
+        if (!names?.Any()  ?? true)
+            return [];
+
+        Func<string, string> lastNameSelector = name => name.Split(' ')[1];
+
+        var ordered = sort == "ASC" ? names.OrderBy(lastNameSelector)
+        : names.OrderByDescending(lastNameSelector);
+
+        return ordered.ToArray();
+    }
 }

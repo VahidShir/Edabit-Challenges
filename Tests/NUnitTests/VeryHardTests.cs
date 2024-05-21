@@ -1,7 +1,5 @@
 ﻿using EdabitChallenges;
 
-using Microsoft.VisualStudio.TestPlatform.TestHost;
-
 using NUnit.Framework;
 using NUnit.Framework.Legacy;
 
@@ -11,6 +9,19 @@ namespace Tests.NUnitTests;
 [TestFixture]
 public class VeryHardTests
 {
+    [Test]
+    [TestCase(new string[] { "John Locke", "Thomas Aquinas", "David Hume", "Rene Descartes" }, "ASC", ExpectedResult = new string[] { "Thomas Aquinas", "Rene Descartes", "David Hume", "John Locke" })]
+    [TestCase(new string[] { "Paul Erdos", "Leonhard Euler", "Carl Gauss" }, "DESC", ExpectedResult = new string[] { "Carl Gauss", "Leonhard Euler", "Paul Erdos" })]
+    [TestCase(new string[] { "Michael Phelps", "Jesse Owens", "Michael Jordan", "Usain Bolt" }, "DESC", ExpectedResult = new string[] { "Michael Phelps", "Jesse Owens", "Michael Jordan", "Usain Bolt" })]
+    [TestCase(new string[] { "Al Gore", "Barack Obama" }, "ASC", ExpectedResult = new string[] { "Al Gore", "Barack Obama" })]
+    [TestCase(new string[] { "Albert Einstein" }, "ASC", ExpectedResult = new string[] { "Albert Einstein" })]
+    [TestCase(new string[0], "DESC", ExpectedResult = new string[0])]
+    [TestCase(null, "DESC", ExpectedResult = new string[0])]
+    public static string[] TestSortContacts(string[]? names, string sort)
+    {
+        return VeryHard.SortContacts(names, sort);
+    }
+
     [Test]
     public static void OverTime()
     {
