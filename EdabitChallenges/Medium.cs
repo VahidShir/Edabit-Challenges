@@ -1,9 +1,26 @@
-﻿using System.Reflection.Metadata.Ecma335;
+﻿using System.Globalization;
+using System.Reflection.Metadata.Ecma335;
 
 namespace EdabitChallenges;
 
 public static class Medium
 {
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/GvGSPC9wiY4bS9AMg">Link to challenge</see>
+    /// </summary>
+    public static string FormatNum(int num)
+    {
+        return num.ToString("C0").Replace(CultureInfo.CurrentCulture.NumberFormat.CurrencySymbol, "");
+    }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/GvGSPC9wiY4bS9AMg">Link to challenge</see>
+    /// </summary>
+    public static string FormatNumV2(int num)
+    {
+        return num.ToString("n0");
+    }
+
     /// <summary>
     /// <see href="https://edabit.com/challenge/4eSei6t8emzpyMwvu">Link to challenge</see>
     /// </summary>

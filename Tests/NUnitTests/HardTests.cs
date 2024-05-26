@@ -1,7 +1,5 @@
 ﻿using EdabitChallenges;
 
-using Microsoft.VisualStudio.TestPlatform.TestHost;
-
 using NUnit.Framework;
 using NUnit.Framework.Legacy;
 
@@ -11,6 +9,20 @@ namespace Tests.NUnitTests;
 [TestFixture]
 public class HardTests
 {
+    [Test]
+    [TestCase("Big Boi", ExpectedResult = "42 69 67 20 42 6f 69")]
+    [TestCase("Marty Poppinson", ExpectedResult = "4d 61 72 74 79 20 50 6f 70 70 69 6e 73 6f 6e")]
+    [TestCase("abcdefghi", ExpectedResult = "61 62 63 64 65 66 67 68 69")]
+    [TestCase("oh dear", ExpectedResult = "6f 68 20 64 65 61 72")]
+    [TestCase("i hate C#", ExpectedResult = "69 20 68 61 74 65 20 43 23")]
+    [TestCase("i love C++ , not really", ExpectedResult = "69 20 6c 6f 76 65 20 43 2b 2b 20 2c 20 6e 6f 74 20 72 65 61 6c 6c 79")]
+
+    public static string ConvertToHex(string input)
+    {
+        Console.WriteLine($"Input: {input}");
+        return Hard.ConvertToHex(input);
+    }
+
     [Test]
     [TestCase(new int[] { 2, 3, 5 }, 720, ExpectedResult = new int[] { 4, 2, 1 })]
     [TestCase(new int[] { 2, 3, 19 }, 1026, ExpectedResult = new int[] { 1, 3, 1 })]

@@ -4,6 +4,23 @@ namespace EdabitChallenges;
 
 public static class Hard
 {
+        /// <summary>
+    /// <see href="https://edabit.com/challenge/GvGSPC9wiY4bS9AMg">Link to challenge</see>
+    /// </summary>
+    public static string FormatNum(int num)
+    {
+        return string.Format("c2", num);
+    }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/R4YcSt798Krokao2R">Link to challenge</see>
+    /// </summary>
+    public static string ConvertToHex(string inputword)
+    {
+        // ConvertToHex("hello world") ➞ "68 65 6c 6c 6f 20 77 6f 72 6c 64"
+        return string.Join(" ", inputword.Select(c => Convert.ToHexString([(byte)c]))).ToLower();
+    }
+
     /// <summary>
     /// <see href="https://edabit.com/challenge/YGhgctqPsKQxQQCFS">Link to challenge</see>
     /// </summary>
