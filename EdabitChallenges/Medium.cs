@@ -1,10 +1,18 @@
 ﻿using System.Globalization;
 using System.Reflection.Metadata.Ecma335;
+using System.Text;
 
 namespace EdabitChallenges;
 
 public static class Medium
 {
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/nvphhA5K6Xhk7FScP">Link to challenge</see>
+    /// </summary>
+    public static byte[] GetUTF8BOM() => UTF8Encoding.UTF8.GetPreamble();
+
+
     /// <summary>
     /// <see href="https://edabit.com/challenge/GvGSPC9wiY4bS9AMg">Link to challenge</see>
     /// </summary>
