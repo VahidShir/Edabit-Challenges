@@ -6,6 +6,13 @@ namespace EdabitChallenges;
 
 public static class Medium
 {
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/7F8ZhHpxeW7K65XRL>Link to challenge</see>
+    /// </summary>
+    public static int SumSmallest(int[] values)
+    {
+        return values.Where(x => x >= 0).Order().Take(2).Sum();
+    }
 
     /// <summary>
     /// <see href="https://edabit.com/challenge/8Sc582yHht2auBpCY">Link to challenge</see>
