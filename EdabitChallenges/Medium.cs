@@ -7,6 +7,14 @@ namespace EdabitChallenges;
 public static class Medium
 {
     /// <summary>
+    /// <see href="https://edabit.com/challenge/SfZx7qzXheYQxtQbF>Link to challenge</see>
+    /// </summary>
+    public static string RemoveSpecialCharacters(string str)
+    {
+        return string.Concat(str.Where(c => (char.IsLetterOrDigit(c) || c is '_' or '-' or ' ')));
+    }
+
+    /// <summary>
     /// <see href="https://edabit.com/challenge/ynZfn2LifKN25fP84>Link to challenge</see>
     /// </summary>
     public static string FindNemo(string sentence)
