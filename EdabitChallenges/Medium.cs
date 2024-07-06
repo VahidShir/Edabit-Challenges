@@ -7,6 +7,15 @@ namespace EdabitChallenges;
 public static class Medium
 {
     /// <summary>
+    /// <see href="https://edabit.com/challenge/ynZfn2LifKN25fP84>Link to challenge</see>
+    /// </summary>
+    public static string FindNemo(string sentence)
+    {
+        var firstIndex = sentence.Split(' ').ToList().IndexOf("Nemo");
+        return firstIndex == -1 ? "I can't find Nemo :(" : $"I found Nemo at {firstIndex + 1}!";
+    }
+
+    /// <summary>
     /// <see href="https://edabit.com/challenge/biJhNvddqC5zmRuKz>Link to challenge</see>
     /// </summary>
     public static bool HasFriday13th(int month, int year)
