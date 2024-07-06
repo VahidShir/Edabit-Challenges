@@ -4,7 +4,7 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine(Medium.SumSmallest([2, 9, 6, -1]));
+        Console.WriteLine(Medium.HasFriday13th(1, 1985));
 
         Console.ReadLine();
     }

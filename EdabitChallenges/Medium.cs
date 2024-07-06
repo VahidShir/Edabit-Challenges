@@ -7,6 +7,14 @@ namespace EdabitChallenges;
 public static class Medium
 {
     /// <summary>
+    /// <see href="https://edabit.com/challenge/biJhNvddqC5zmRuKz>Link to challenge</see>
+    /// </summary>
+    public static bool HasFriday13th(int month, int year)
+    {
+        return new DateTime(year, month, 13).DayOfWeek == DayOfWeek.Friday;
+    }
+
+    /// <summary>
     /// <see href="https://edabit.com/challenge/7F8ZhHpxeW7K65XRL>Link to challenge</see>
     /// </summary>
     public static int SumSmallest(int[] values)
