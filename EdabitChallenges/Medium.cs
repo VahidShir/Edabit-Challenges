@@ -8,6 +8,19 @@ public static class Medium
 {
 
     /// <summary>
+    /// <see href="https://edabit.com/challenge/8Sc582yHht2auBpCY">Link to challenge</see>
+    /// </summary>
+    public static bool IsStrangePair(string str1, string str2)
+    {
+        if (str1 == "" && str2 == "")
+            return true;
+        if (str1 == "" || str2 == "")
+            return false;
+
+        return str1[0] == str2[^1] && str1[^1] == str2[0];
+    }
+
+    /// <summary>
     /// <see href="https://edabit.com/challenge/nvphhA5K6Xhk7FScP">Link to challenge</see>
     /// </summary>
     public static byte[] GetUTF8BOM() => UTF8Encoding.UTF8.GetPreamble();
