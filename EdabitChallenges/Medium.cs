@@ -7,6 +7,21 @@ namespace EdabitChallenges;
 public static class Medium
 {
     /// <summary>
+    /// <see href="https://edabit.com/challenge/5B4jvew2NvzKhfcQv>Link to challenge</see>
+    /// </summary>
+    public static bool CheckPerfect(int num)
+    {
+        List<int> factors = [];
+        for (int i = 1; i <= num / 2; i++)
+        {
+            if(num % i == 0)
+                factors.Add(i);
+        }
+
+        return factors.Sum() == num ? true : false;
+    }
+
+    /// <summary>
     /// <see href="https://edabit.com/challenge/SfZx7qzXheYQxtQbF>Link to challenge</see>
     /// </summary>
     public static string RemoveSpecialCharacters(string str)

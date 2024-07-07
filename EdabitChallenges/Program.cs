@@ -4,7 +4,7 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        var result = Medium.RemoveSpecialCharacters("%fd76$fd(-)6GvKlO.");
+        var result = Medium.CheckPerfect(97);
         Console.WriteLine(result);
 
         Console.ReadLine();
