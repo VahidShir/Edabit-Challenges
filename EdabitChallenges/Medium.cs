@@ -1,4 +1,5 @@
-﻿using System.Globalization;
+﻿using System.Data;
+using System.Globalization;
 using System.Reflection.Metadata.Ecma335;
 using System.Text;
 
@@ -6,6 +7,14 @@ namespace EdabitChallenges;
 
 public static class Medium
 {
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/uz6HACQLjH9DE6HcP>Link to challenge</see>
+    /// </summary>
+    public static decimal MyPi(int n)
+    {
+        return Math.Round(decimal.Parse(Math.PI.ToString("f6")), n, MidpointRounding.AwayFromZero );
+    }
+
     /// <summary>
     /// <see href="https://edabit.com/challenge/H77JNgLtEnQcX5hcu>Link to challenge</see>
     /// </summary>
