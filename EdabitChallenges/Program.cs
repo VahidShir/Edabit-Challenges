@@ -4,7 +4,7 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        var result = Medium.CheckPerfect(97);
+        var result = Medium.IsSymmetrical(44444444);
         Console.WriteLine(result);
 
         Console.ReadLine();

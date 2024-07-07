@@ -7,6 +7,14 @@ namespace EdabitChallenges;
 public static class Medium
 {
     /// <summary>
+    /// <see href="https://edabit.com/challenge/H77JNgLtEnQcX5hcu>Link to challenge</see>
+    /// </summary>
+    public static bool IsSymmetrical(int num)
+    {
+        return num.ToString() == string.Concat(num.ToString().Reverse());
+    }
+
+    /// <summary>
     /// <see href="https://edabit.com/challenge/5B4jvew2NvzKhfcQv>Link to challenge</see>
     /// </summary>
     public static bool CheckPerfect(int num)
@@ -14,7 +22,7 @@ public static class Medium
         List<int> factors = [];
         for (int i = 1; i <= num / 2; i++)
         {
-            if(num % i == 0)
+            if (num % i == 0)
                 factors.Add(i);
         }
 
