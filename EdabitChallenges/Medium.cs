@@ -1,18 +1,26 @@
 ﻿using System.Data;
 using System.Globalization;
-using System.Reflection.Metadata.Ecma335;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace EdabitChallenges;
 
 public static class Medium
 {
     /// <summary>
+    /// <see href="https://edabit.com/challenge/n5Q8vWopD3Kmc8ADi>Link to challenge</see>
+    /// </summary>
+    public static bool IsValidPhoneNumber(string str)
+    {
+        return Regex.IsMatch(str, @"^\([0-9]{3}\) [0-9]{3}-[0-9]{4}$");
+    }
+
+    /// <summary>
     /// <see href="https://edabit.com/challenge/uz6HACQLjH9DE6HcP>Link to challenge</see>
     /// </summary>
     public static decimal MyPi(int n)
     {
-        return Math.Round(decimal.Parse(Math.PI.ToString("f6")), n, MidpointRounding.AwayFromZero );
+        return Math.Round(decimal.Parse(Math.PI.ToString("f6")), n, MidpointRounding.AwayFromZero);
     }
 
     /// <summary>
