@@ -8,6 +8,35 @@ namespace EdabitChallenges;
 public static class Medium
 {
     /// <summary>
+    /// <see href="https://edabit.com/challenge/AyCKKtuhYjNo9eYwJ>Link to challenge</see>
+    /// </summary>
+    public static int LargestGap(int[] arr)
+    {
+        //var temp = arr.Order().Zip([arr.], (a, b) => 2);
+        int maxGap = 0;
+        arr = arr.Order().ToArray();
+        for (int i = 0; i < arr.Length - 1; i++)
+        {
+            int gap = arr[i + 1] - arr[i];
+            if (gap > maxGap)
+                maxGap = gap;
+        }
+
+        return maxGap;
+    }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/AyCKKtuhYjNo9eYwJ>Link to challenge</see>
+    /// </summary>
+    public static int LargestGap2(int[] arr)
+    {
+        var firstArr = arr.Order().ToArray();
+        var secondArr = firstArr[1..^1].Append(firstArr[^1]).ToArray();
+        var result = firstArr.Zip(secondArr, (a, b) => b - a).Max();
+        return result;
+    }
+
+    /// <summary>
     /// <see href="https://edabit.com/challenge/n5Q8vWopD3Kmc8ADi>Link to challenge</see>
     /// </summary>
     public static bool IsValidPhoneNumber(string str)
