@@ -8,6 +8,20 @@ namespace EdabitChallenges;
 public static class Medium
 {
     /// <summary>
+    /// <see href="https://edabit.com/challenge/ToMXLjWDLQqFua7Wh>Link to challenge</see>
+    /// </summary>
+    public static string NoYelling(string phrase)
+    {
+        if (phrase.EndsWith('?'))
+            return phrase.TrimEnd('?') + "?";
+
+        if (phrase.EndsWith('!'))
+            return phrase.TrimEnd('!') + "!";
+
+        return phrase;
+    }
+
+    /// <summary>
     /// <see href="https://edabit.com/challenge/G4DQHo2YgDBAxBJH8>Link to challenge</see>
     /// </summary>
     public static int pentagonal(int num)
