@@ -1,5 +1,6 @@
 ﻿using System.Data;
 using System.Globalization;
+using System.Numerics;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -7,6 +8,14 @@ namespace EdabitChallenges;
 
 public static class Medium
 {
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/jxQTbif5fx7J8FeTT>Link to challenge</see>
+    /// </summary>
+    public static bool KToK(string n, int k)
+    {
+        return BigInteger.Pow(k, k).ToString() == n;
+    }
+
     /// <summary>
     /// <see href="https://edabit.com/challenge/ToMXLjWDLQqFua7Wh>Link to challenge</see>
     /// </summary>
