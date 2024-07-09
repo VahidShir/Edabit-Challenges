@@ -1,6 +1,7 @@
 ﻿using System.Data;
 using System.Globalization;
 using System.Numerics;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -8,6 +9,16 @@ namespace EdabitChallenges;
 
 public static class Medium
 {
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/XovEQex684EnTcZqA>Link to challenge</see>
+    /// </summary>
+    public static string Century(int year)
+    {
+        var firstTwo = year.ToString().Substring(0, 2);
+        var century =  year.ToString().EndsWith("00") ? int.Parse(firstTwo) + "" : (int.Parse(firstTwo) + 1) + "";
+        return century + "th century";
+    }
+
     /// <summary>
     /// <see href="https://edabit.com/challenge/jxQTbif5fx7J8FeTT>Link to challenge</see>
     /// </summary>

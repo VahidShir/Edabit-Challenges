@@ -4,7 +4,7 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        var result = Medium.KToK("387420489", 9);
+        var result = Medium.Century(2005);
         Console.WriteLine(result);
 
         Console.ReadLine();
