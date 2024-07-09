@@ -8,6 +8,24 @@ namespace EdabitChallenges;
 public static class Medium
 {
     /// <summary>
+    /// <see href="https://edabit.com/challenge/G4DQHo2YgDBAxBJH8>Link to challenge</see>
+    /// </summary>
+    public static int pentagonal(int num)
+    {
+        return 0; //todo
+    }
+
+    /// <summary>
+    /// <see href="https://edabit.com/challenge/NRAbyiQP9ZNa4bDRT>Link to challenge</see>
+    /// </summary>
+    public static int MysteryFunc(int num)
+    {
+        var nums = num.ToString().Select(c => int.Parse(c.ToString())).ToArray();
+
+        return nums.Aggregate((a, b) => a * b);
+    }
+
+    /// <summary>
     /// <see href="https://edabit.com/challenge/AyCKKtuhYjNo9eYwJ>Link to challenge</see>
     /// </summary>
     public static int LargestGap(int[] arr)
