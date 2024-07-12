@@ -1,15 +1,29 @@
 ﻿using EdabitChallenges;
 
-using Microsoft.VisualStudio.TestPlatform.TestHost;
-
 using NUnit.Framework;
 
 namespace Tests.NUnitTests;
 
 
 [TestFixture]
-public class Mediumtests
+public class MediumTests
 {
+  [Test]
+  [TestCase("@edabit.com", ExpectedResult=false)]
+  [TestCase("@edabit", ExpectedResult=false)]
+  [TestCase("matt@edabit.com", ExpectedResult=false)]
+  [TestCase("", ExpectedResult=false)]
+  [TestCase("hello.gmail@com", ExpectedResult=false)]
+  [TestCase("bill.gates@microsoft.com", ExpectedResult=true)]
+  [TestCase("hello@email", ExpectedResult=false)]
+  [TestCase("%^%$#%^%", ExpectedResult=false)]
+  [TestCase("www.email.com", ExpectedResult=false)]
+  [TestCase("email", ExpectedResult=false)]
+    public static bool FixedTest(string str)
+    {
+        return Medium.ValidateEmail(str);
+    }
+
     [Test]
     [TestCase("4 5 29 54 4 0 -214 542 -64 1 -3 6 -6", ExpectedResult = "542 -214")]
     [TestCase("1 -1", ExpectedResult = "1 -1")]

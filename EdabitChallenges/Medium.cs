@@ -10,12 +10,44 @@ namespace EdabitChallenges;
 public static class Medium
 {
     /// <summary>
+    /// <see href="https://edabit.com/challenge/egy6LWExtnR6JkwBg>Link to challenge</see>
+    /// </summary>
+    public static bool ValidateEmail(string str)
+    {
+        //bool contailAtSign = str.Contains('@');
+        //var atSignIndex = str.Where((v, index) => v == '@');
+        var atSignIndexes = str.Index().Where(c => c.Item == '@');
+
+        if (atSignIndexes.Count() is 0 or > 1)
+            return false;
+
+        if (atSignIndexes.Single().Index == 0)
+            return false;
+
+        string beforeAtSign = str.Split('@')[0];
+        bool isDotBeforeAtSignValid = beforeAtSign.Split('.').Count() >= 2
+            && beforeAtSign.Split('.').All(x => x.Length > 0);
+
+        if (!isDotBeforeAtSignValid)
+            return false;
+
+        string afterAtSign = str.Split('@')[1];
+        bool isDotAfterAtSignValid = afterAtSign.Split('.').Count() >= 2
+            && afterAtSign.Split('.').All(x => x.Length > 0);
+
+        if (!isDotAfterAtSignValid)
+            return false;
+
+        return true;
+    }
+
+    /// <summary>
     /// <see href="https://edabit.com/challenge/XovEQex684EnTcZqA>Link to challenge</see>
     /// </summary>
     public static string Century(int year)
     {
         var firstTwo = year.ToString().Substring(0, 2);
-        var century =  year.ToString().EndsWith("00") ? int.Parse(firstTwo) + "" : (int.Parse(firstTwo) + 1) + "";
+        var century = year.ToString().EndsWith("00") ? int.Parse(firstTwo) + "" : (int.Parse(firstTwo) + 1) + "";
         return century + "th century";
     }
 
