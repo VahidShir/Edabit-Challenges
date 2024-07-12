@@ -10,6 +10,15 @@ namespace EdabitChallenges;
 public static class Medium
 {
     /// <summary>
+    /// <see href="https://edabit.com/challenge/uz4r69EHHSQMosT8D>Link to challenge</see>
+    /// </summary>
+    public static string MakeTitle(string str)
+    {
+        var firstLetterCapitalizedWords = str.Split(' ').Select(x => x.Substring(0, 1).ToUpper() + x.Substring(1, x.Length - 1));
+        return string.Join(' ', firstLetterCapitalizedWords);
+    }
+
+    /// <summary>
     /// <see href="https://edabit.com/challenge/egy6LWExtnR6JkwBg>Link to challenge</see>
     /// </summary>
     public static bool ValidateEmail(string str)

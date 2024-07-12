@@ -4,7 +4,7 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        var result = Medium.ValidateEmail("matt@edabit.com");
+        var result = Medium.MakeTitle("capitalize every word");
         Console.WriteLine(result);
 
         Console.ReadLine();
