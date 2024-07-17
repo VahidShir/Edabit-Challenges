@@ -10,6 +10,22 @@ namespace EdabitChallenges;
 public static class Medium
 {
     /// <summary>
+    /// <see href="https://edabit.com/challenge/TLWqG49uMLa7zgxPE>Link to challenge</see>
+    /// </summary>
+    public static string Encrypt(string word)
+    {
+        Dictionary<char, char> map = new() {
+            { 'a', '0'},
+            { 'e', '1'},
+            { 'i', '2'},
+            { 'o', '2'},
+            { 'u', '3'}
+        };
+
+        return string.Concat(word.Reverse().Select(c => map.ContainsKey(c) ? map[c] : c)) + "aca";
+    }
+
+    /// <summary>
     /// <see href="https://edabit.com/challenge/uz4r69EHHSQMosT8D>Link to challenge</see>
     /// </summary>
     public static string MakeTitle(string str)
