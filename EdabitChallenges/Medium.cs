@@ -10,6 +10,19 @@ namespace EdabitChallenges;
 public static class Medium
 {
     /// <summary>
+    /// <see href="https://edabit.com/challenge/dgHXtSrgyWbJ3cXvL">Link to challenge</see>
+    /// </summary>
+    public static int[] RemoveSmallest(int[] values)
+    {
+        if (values is [])
+            return [];
+
+        var valuesList = values.ToList();
+        valuesList.Remove(values.Min());
+        return valuesList.ToArray();
+    }
+
+    /// <summary>
     /// <see href="https://edabit.com/challenge/TLWqG49uMLa7zgxPE>Link to challenge</see>
     /// </summary>
     public static string Encrypt(string word)
@@ -26,7 +39,7 @@ public static class Medium
     }
 
     /// <summary>
-    /// <see href="https://edabit.com/challenge/uz4r69EHHSQMosT8D>Link to challenge</see>
+    /// <see href="https://edabit.com/challenge/uz4r69EHHSQMosT8D">Link to challenge</see>
     /// </summary>
     public static string MakeTitle(string str)
     {
@@ -35,7 +48,7 @@ public static class Medium
     }
 
     /// <summary>
-    /// <see href="https://edabit.com/challenge/egy6LWExtnR6JkwBg>Link to challenge</see>
+    /// <see href="https://edabit.com/challenge/egy6LWExtnR6JkwBg">Link to challenge</see>
     /// </summary>
     public static bool ValidateEmail(string str)
     {
@@ -67,7 +80,7 @@ public static class Medium
     }
 
     /// <summary>
-    /// <see href="https://edabit.com/challenge/XovEQex684EnTcZqA>Link to challenge</see>
+    /// <see href="https://edabit.com/challenge/XovEQex684EnTcZqA">Link to challenge</see>
     /// </summary>
     public static string Century(int year)
     {
@@ -77,7 +90,7 @@ public static class Medium
     }
 
     /// <summary>
-    /// <see href="https://edabit.com/challenge/jxQTbif5fx7J8FeTT>Link to challenge</see>
+    /// <see href="https://edabit.com/challenge/jxQTbif5fx7J8FeTT">Link to challenge</see>
     /// </summary>
     public static bool KToK(string n, int k)
     {
@@ -85,7 +98,7 @@ public static class Medium
     }
 
     /// <summary>
-    /// <see href="https://edabit.com/challenge/ToMXLjWDLQqFua7Wh>Link to challenge</see>
+    /// <see href="https://edabit.com/challenge/ToMXLjWDLQqFua7Wh">Link to challenge</see>
     /// </summary>
     public static string NoYelling(string phrase)
     {
@@ -99,7 +112,7 @@ public static class Medium
     }
 
     /// <summary>
-    /// <see href="https://edabit.com/challenge/G4DQHo2YgDBAxBJH8>Link to challenge</see>
+    /// <see href="https://edabit.com/challenge/G4DQHo2YgDBAxBJH8">Link to challenge</see>
     /// </summary>
     public static int pentagonal(int num)
     {
@@ -107,7 +120,7 @@ public static class Medium
     }
 
     /// <summary>
-    /// <see href="https://edabit.com/challenge/NRAbyiQP9ZNa4bDRT>Link to challenge</see>
+    /// <see href="https://edabit.com/challenge/NRAbyiQP9ZNa4bDRT">Link to challenge</see>
     /// </summary>
     public static int MysteryFunc(int num)
     {
@@ -117,7 +130,7 @@ public static class Medium
     }
 
     /// <summary>
-    /// <see href="https://edabit.com/challenge/AyCKKtuhYjNo9eYwJ>Link to challenge</see>
+    /// <see href="https://edabit.com/challenge/AyCKKtuhYjNo9eYwJ">Link to challenge</see>
     /// </summary>
     public static int LargestGap(int[] arr)
     {
@@ -135,7 +148,7 @@ public static class Medium
     }
 
     /// <summary>
-    /// <see href="https://edabit.com/challenge/AyCKKtuhYjNo9eYwJ>Link to challenge</see>
+    /// <see href="https://edabit.com/challenge/AyCKKtuhYjNo9eYwJ">Link to challenge</see>
     /// </summary>
     public static int LargestGap2(int[] arr)
     {
@@ -146,7 +159,7 @@ public static class Medium
     }
 
     /// <summary>
-    /// <see href="https://edabit.com/challenge/n5Q8vWopD3Kmc8ADi>Link to challenge</see>
+    /// <see href="https://edabit.com/challenge/n5Q8vWopD3Kmc8ADi">Link to challenge</see>
     /// </summary>
     public static bool IsValidPhoneNumber(string str)
     {
@@ -154,7 +167,7 @@ public static class Medium
     }
 
     /// <summary>
-    /// <see href="https://edabit.com/challenge/uz6HACQLjH9DE6HcP>Link to challenge</see>
+    /// <see href="https://edabit.com/challenge/uz6HACQLjH9DE6HcP">Link to challenge</see>
     /// </summary>
     public static decimal MyPi(int n)
     {
@@ -162,7 +175,7 @@ public static class Medium
     }
 
     /// <summary>
-    /// <see href="https://edabit.com/challenge/H77JNgLtEnQcX5hcu>Link to challenge</see>
+    /// <see href="https://edabit.com/challenge/H77JNgLtEnQcX5hcu">Link to challenge</see>
     /// </summary>
     public static bool IsSymmetrical(int num)
     {
@@ -170,7 +183,7 @@ public static class Medium
     }
 
     /// <summary>
-    /// <see href="https://edabit.com/challenge/5B4jvew2NvzKhfcQv>Link to challenge</see>
+    /// <see href="https://edabit.com/challenge/5B4jvew2NvzKhfcQv">Link to challenge</see>
     /// </summary>
     public static bool CheckPerfect(int num)
     {
@@ -185,7 +198,7 @@ public static class Medium
     }
 
     /// <summary>
-    /// <see href="https://edabit.com/challenge/SfZx7qzXheYQxtQbF>Link to challenge</see>
+    /// <see href="https://edabit.com/challenge/SfZx7qzXheYQxtQbF">Link to challenge</see>
     /// </summary>
     public static string RemoveSpecialCharacters(string str)
     {
@@ -193,7 +206,7 @@ public static class Medium
     }
 
     /// <summary>
-    /// <see href="https://edabit.com/challenge/ynZfn2LifKN25fP84>Link to challenge</see>
+    /// <see href="https://edabit.com/challenge/ynZfn2LifKN25fP84">Link to challenge</see>
     /// </summary>
     public static string FindNemo(string sentence)
     {
@@ -202,7 +215,7 @@ public static class Medium
     }
 
     /// <summary>
-    /// <see href="https://edabit.com/challenge/biJhNvddqC5zmRuKz>Link to challenge</see>
+    /// <see href="https://edabit.com/challenge/biJhNvddqC5zmRuKz">Link to challenge</see>
     /// </summary>
     public static bool HasFriday13th(int month, int year)
     {
@@ -210,7 +223,7 @@ public static class Medium
     }
 
     /// <summary>
-    /// <see href="https://edabit.com/challenge/7F8ZhHpxeW7K65XRL>Link to challenge</see>
+    /// <see href="https://edabit.com/challenge/7F8ZhHpxeW7K65XRL">Link to challenge</see>
     /// </summary>
     public static int SumSmallest(int[] values)
     {
